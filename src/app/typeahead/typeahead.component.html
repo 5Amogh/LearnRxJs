@@ -1,8 +1,7 @@
 Get continents
-<input id="type-ahead" (keyup)= keyUpEvent($event)/>
+<input id="type-ahead" #input (input)="inputEvent($event)" />
+{{input.value}}
 <hr />
-<ng-container *ngIf="output.length">
-<ng-container *ngFor="let i of output;trackBy:trackByContinent">
-    <li>{{i}}</li>
-</ng-container>
+<ng-container *ngFor="let op of output; trackBy: trackByContinent">
+  <li>{{ op }}</li>
 </ng-container>

@@ -37,7 +37,7 @@ export class TypeaheadComponent {
     );
   }
 
-  keyUpEvent($event: any) {
+  inputEvent($event: any) {
     fromEvent($event.target,'keyup').pipe(
         debounceTime(200),
         map((e: any) => e.target.value),
